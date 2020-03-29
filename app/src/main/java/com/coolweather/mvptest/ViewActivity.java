@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import com.coolweather.mvptest.IView;
 
 public class ViewActivity extends AppCompatActivity implements IView {
 
@@ -26,6 +27,10 @@ public class ViewActivity extends AppCompatActivity implements IView {
     public void onProgressLoading(int progress){
         // UI展示 业务处理完成结果
         progressBar.setProgress(progress);
+    }
+    @Override
+    public void showText(String data){
+       infoText.setText(data);
     }
 
     @Override
